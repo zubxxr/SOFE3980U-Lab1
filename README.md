@@ -1,5 +1,5 @@
-# MS 1: Software Project Management and Comprehension Tool (Apache Maven)
-## repostory link
+# Lab 1: Software Project Management and Comprehension Tool (Apache Maven)
+## Repository link
 https://github.com/GeorgeDaoud3/SOFE3980U-Lab1.git
 ## Objective: 
 1. Install Maven in Windows OS.
@@ -34,7 +34,7 @@ development tasks in the project like:
     echo %JAVA_HOME%
     ```
     It should display the JDK path
-* Download the **Binary zip archive** format of [Maven](https://maven.apache.org/download.cgi#files) then uncompress it to a certain folder.
+* Download the **Binary zip archive** format of [Maven 3.9.9](https://maven.apache.org/download.cgi#files) then uncompress it to a certain folder.
 * Add the Maven path to the system path
     1.	Go to the **Environment variables** for the user as you did before.
     2.	Find an existing **Path** Variable. Then click **edit**.
