@@ -1,13 +1,26 @@
 # Lab 1: Software Project Management and Comprehension Tool (Apache Maven)
-## Repository link
-https://github.com/GeorgeDaoud3/SOFE3980U-Lab1.git
-## Objective: 
+
+## Table of Contents
+- [Objective](#objective)
+- [What’s Maven](#whats-maven)
+- [Creating a Project](#creating-a-project)
+- [Building the Project](#building-the-project)
+- [Running the Project](#running-the-project)
+- [Adding Source Files to the Project](#adding-source-files-to-the-project)
+- [Generate Documentation for the Project](#generate-documentation-for-the-project)
+- [Add Dependencies](#add-dependencies)
+- [Add Test Cases](#add-test-cases)
+- [Design](#design)
+- [Deliverables](#deliverables)
+
+## Objective
 1. Install Maven in Windows OS.
 2. Be familiar with Maven as a software project management tool.
 3. Understand how to create, configure and build Maven projects.
-4. Be able to automatically generate Documentation of the project.
+4. Be able to automatically generate documentation of the project.
 5. Be able to configure the project to automatically add dependencies to the jar file.
-6. Learn how to write and run tests a the project.
+6. Learn how to write and run tests for the project.
+
 ## What’s Maven?
 It’s A tool for building and managing any type of java-based project.
 It also can be used to build projects written in C#, Scala, Ruby, etc. 
@@ -20,6 +33,7 @@ development tasks in the project like:
 * Distribution
 * Releases
 * Mailing list
+  
 ## Maven Installation
 * Have a JDK installed on your system. It should satisfy [the minimum requirement](https://maven.apache.org/download.cgi#system-requirements). 
 * Set the **JAVA_HOME** environment variable pointing to your JDK installation. 
@@ -46,7 +60,8 @@ mvn -v
 ```
 It should display an output similar to  
 ![Maven version](images/mvnVer.jpg)
-## Creating a project
+
+## Creating a Project
 * Within a command window, change the directory to the folder in which you want to create the project (replace **projects_root** with the actual path of the folder)  
 ``` cmd
 cd <projects_root>
@@ -66,7 +81,8 @@ mvn archetype:generate^
 ![Maven Project Structure](images/treePro.jpg)  
 &nbsp;&nbsp;&nbsp;&nbsp; A default HelloWorld java App will be created for you (**App.java**) as well as a default test file (**AppTest.java**). You can edit the files using any text editor. The content of the App.java file should look like this:  
  ![Maven Project Structure](images/appJava.jpg)  
-## Building the project:
+ 
+## Building the Project
 * Change the directory to the path of the pom.xml file  
 ``` cmd 
 cd BinaryCalculator
@@ -76,7 +92,8 @@ cd BinaryCalculator
 mvn clean package
 ```
 &nbsp;&nbsp;&nbsp;&nbsp; the first argument (**clean**) will remove any previously generated output while the **package** argument will rebuild the project and produce a jar file for the whole project. During the packaging process, the tests will be executed. All tests should be passed to complete the building process. All outputs including the jar file will be saved at the path (**BinaryCalculator\target**). The name of the built jar file will follow the pattern **DartifactId-Dversion.jar**. Thus it should be **BinaryCalculator-1.0.0.jar** for this project.
-## Running the project
+
+## Running The Project
 * Running the project using the jar file has many advantages especially if your project consists of multi-files and has dependencies that needed to be downloaded and added to the project. To run the project, invoke the following command within the command window (assuming the current directory is still BinaryCalculator)  
 
 ``` cmd
@@ -110,7 +127,7 @@ mvn clean package
 java -jar target/BinaryCalculator-1.0.0.jar
 ```
 
-## Adding Source files to the project
+## Adding Source Files to the Project
 * Copy the files from folder **v1** from the GitHub repository to the path **src/main/java/com/ontariotechu/sofe3980U/** . 
 The **Binary.java** file contains a Binary class that stores the binary value as a string. The class has three functions
     1.	A **Constructor** that takes a string of the binary value
@@ -127,7 +144,8 @@ java -jar target/BinaryCalculator-1.0.0.jar
 ```
 The output should look like  
 ![output of v1](images/out1.jpg)  
-## Generate Documentation for the project
+
+## Generate Documentation for the Project
 * To Generate documentation of the project, execute the following command  
 ``` cmd
 mvn site
@@ -159,7 +177,8 @@ mvn site
 A new menu item called **Project Reports** should appear in the generated **index.html** file  
 ![second version of documentation](images/site2.jpg)  
 * Click **Project Reports**, then **Javadoc**. Finally, choose **Binary** and explore the generated document. Note that that document is generated according to the comments in the source code. For example, in the following figure shows both the Javadoc comment of the **add** function in the source code and the corresponding generated documentation.  
-![javadoc tool](images/javadoc.jpg)  
+![javadoc tool](images/javadoc.jpg)
+
 ## Add Dependencies
 * **org.joda.time** provides a better representation of time than the standard date and time java classes. The **App.java** file in **v2** directory in the GitHub repository uses this library to print the local file at the begining of the main function.  
 ![app.java with org.joda.time library](images/appDep.jpg)  
@@ -223,7 +242,7 @@ java -jar target/BinaryCalculator-1.0.0-jar-with-dependencies.jar
 The output should look like:  
 ![second version of the output](images/out2.jpg)  
 
-## Add Test cases
+## Add Test Cases
 * Maven already generated a test case for the App class. Open the file **src/test/java/com/ontariotechu/sofe3980U/AppTest.java**. It contains a single test case that always passes  
 ![juint test case](images/appTest.jpg)  
 The **@Test** annotation is used to mark test cases while the condition sent to the **assertTrue** function as an argument determines the success or failure of the test case. Other functions that can be used are shown in the [documentation of the Assert class](https://junit.org/junit4/javadoc/4.13/org/junit/Assert.html).
@@ -260,7 +279,7 @@ mvn clean package site assembly:single
 Now, you can access the result of the test cases from the summary report.  
 ![third version of documentation](images/site3.jpg)  
 
-# Design: 
+# Design
 It's required from your team to
 1. Add three functions to the **Binary** class that perform the following operations over two binary variables. The output of the function should be also a binary function:  
     * **OR**: bitwise logical OR
@@ -269,7 +288,7 @@ It's required from your team to
 2. Update the App.java file to call the new three functions. You may update it to be more interactive and user friendly.
 3. Add three test functions at least for each of new function added into the Binary class
 
-# Deliverables:
+# Deliverables
 1. A GitHub link includes the whole project folder (except the target folder) with the final version of the binary class and the test cases.
 2. A report discussing the source and testing code of the design part.
 3. Audible video of about 3 minutes showing the building and running phases of the project as well as the passed tests. Also, show the generated documentation for the functions you added in the design section. 
