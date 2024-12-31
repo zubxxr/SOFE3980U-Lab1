@@ -176,7 +176,7 @@ mvn site
 ```
 A new menu item called **Project Reports** should appear in the generated **index.html** file  
 ![second version of documentation](images/site2.jpg)  
-* Click **Project Reports**, then **Javadoc**. Finally, choose **Binary** and explore the generated document. Note that that document is generated according to the comments in the source code. For example, in the following figure shows both the Javadoc comment of the **add** function in the source code and the corresponding generated documentation.  
+* Click **Project Reports**, then **Javadoc**. Finally, choose **Binary** and explore the generated document. Note that that document is generated according to the comments in the source code. For example, the following figure shows both the Javadoc comment of the **add** function in the source code and the corresponding generated documentation.  
 ![javadoc tool](images/javadoc.jpg)
 
 ## Add Dependencies
