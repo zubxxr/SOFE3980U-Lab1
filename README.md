@@ -14,7 +14,7 @@
 - [Add Test Cases](#add-test-cases)
 - [Design](#design)
 - [Deliverables](#deliverables)
-## Maven Linux Installation
+
 ## Objective
 1. Install Maven in Windows or Linux.
 2. Be familiar with Maven as a software project management tool.
