@@ -3,6 +3,8 @@
 ## Table of Contents
 - [Objective](#objective)
 - [What’s Maven](#whats-maven)
+- [Maven Windows Installation](#maven-windows-installation)
+- [Maven Linux Installation](#maven-linux-installation)
 - [Creating a Project](#creating-a-project)
 - [Building the Project](#building-the-project)
 - [Running the Project](#running-the-project)
@@ -12,9 +14,9 @@
 - [Add Test Cases](#add-test-cases)
 - [Design](#design)
 - [Deliverables](#deliverables)
-
+## Maven Linux Installation
 ## Objective
-1. Install Maven in Windows OS.
+1. Install Maven in Windows or Linux.
 2. Be familiar with Maven as a software project management tool.
 3. Understand how to create, configure and build Maven projects.
 4. Be able to automatically generate documentation of the project.
@@ -34,7 +36,7 @@ development tasks in the project like:
 * Releases
 * Mailing list
   
-## Maven Installation
+## Maven Windows Installation
 * Have a JDK installed on your system. It should satisfy [the minimum requirement](https://maven.apache.org/download.cgi#system-requirements). 
 * Set the **JAVA_HOME** environment variable pointing to your JDK installation. 
     1.	On the Windows taskbar, right-click the **Windows icon** and select **System**.
@@ -61,12 +63,17 @@ mvn -v
 It should display an output similar to  
 ![Maven version](images/mvnVer.jpg)
 
+## Maven Linux Installation
+* If you would like to install it on Linux, it will be similar to the Maven Windows Installation. You will need a JDK installed that satisifes [the minimum requirement](https://maven.apache.org/download.cgi#system-requirements).
+* Next, you have to download [Maven 3.9.9](https://maven.apache.org/download.cgi#files).
+* Lastly, you have to configure the environment variables for both the JDK and Maven.
+  
 ## Creating a Project
 * Within a command window, change the directory to the folder in which you want to create the project (replace **projects_root** with the actual path of the folder)  
 ``` cmd
 cd <projects_root>
 ```
-* Create a new project using the following command  
+* Create a new project using the following command (**Windows**)
 ``` cmd
 mvn archetype:generate^
     -DgroupId=com.ontariotechu.sofe3980U ^
@@ -75,6 +82,16 @@ mvn archetype:generate^
     -DarchetypeArtifactId=maven-archetype-quickstart^
     -DarchetypeVersion=1.4^
     -DinteractiveMode=false  
+```
+* Create a new project using the following command (**Linux**)
+``` cmd
+mvn archetype:generate \
+    -DgroupId=com.ontariotechu.sofe3980U \
+    -DartifactId=BinaryCalculator \
+    -Dversion=1.0.0 \
+    -DarchetypeArtifactId=maven-archetype-quickstart \
+    -DarchetypeVersion=1.4 \
+    -DinteractiveMode=false 
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;This is a multiline single command. Appending each line by **^** indicates that the command is not ended, and it will be extended to the next line. **archetype:generate** specify that the command will generate a new project. **maven-archetype-quickstart** and **1.4** are template type and template version, respectively. The specified template will be used to create the project. While **DgroupId**, **DartifactId**, and **Dversion** are the group id, project name, and project version, respectively. Group id is a unique Identification for different projects within an organization.  
 &nbsp;&nbsp;&nbsp;&nbsp; The command will create a folder with the same name as the project (**BinaryCalculator**). Within the project folder, a Project Object Model (POM) file (**pom.xml**) is created that contains a configuration script that controls the development cycle of the project. Also, a folder called **src** is created that contains two sub-directories, **main** for the source code and **test** for the testing code. The sub-folder names within both the main and test folders follow the **DgroupId** argument used to generate the project as shown in the following figure.  
