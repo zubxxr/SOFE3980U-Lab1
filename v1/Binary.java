@@ -10,7 +10,7 @@ public class Binary
 	/**
 	* A constructor that generates a binary object.
 	*
-	* @param number a String of the binary values. It should conatins only zeros or ones with any length and order. otherwise, the value of "0" will be stored.   Trailing zeros will be excluded and empty string will be considered as zero.
+	* @param number a String of the binary values. It should contain only zeros or ones with any length and order. otherwise, the value of "0" will be stored.   Trailing zeros will be excluded and empty string will be considered as zero.
 	*/
 	public Binary(String number) {
 		if (number == null || number.isEmpty()) {
