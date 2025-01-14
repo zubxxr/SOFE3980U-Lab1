@@ -38,10 +38,12 @@ public class Binary
 		// If all digits are '0', ensure number is "0"
 		this.number = (beg == number.length()) ? "0" : number.substring(beg);
 	
-		// Ensure empty strings are replaced with "0"
-		if (this.number.isEmpty()) {
+		// uncomment the following code
+		/*
+		if (this.number.isEmpty()) { // replace empty strings with a single zero
 			this.number = "0";
 		}
+  		*/
 	}
 	/**
 	* Return the binary value of the variable
