@@ -312,3 +312,5 @@ It's required from your team to
 1. A GitHub link includes the whole project folder (except the target folder) with the final version of the binary class and the test cases.
 2. A report discussing the source and testing code of the design part.
 3. Audible video of about 3 minutes showing the building and running phases of the project as well as the passed tests. Also, show the generated documentation for the functions you added in the design section.
+
+Put the GitHub link and video link inside your report, and submit the report.
