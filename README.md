@@ -274,7 +274,7 @@ mvn clean package
 Because some of the tests fail, the result should look like  
 ![juint test case](images/testErr.jpg)  
 and no jar file will be created.
-* To fix this problem, uncomment lines 33 to 37 in the Binary class file (**Binary.java**)as shown in the figure  
+* To fix this problem, uncomment lines 42 to 46 in the Binary class file (**Binary.java**)as shown in the figure  
  ![juint test case](images/BinaryTest.jpg)  
 Then, rebuild the project and generate the jar files and the summary.
 ``` cmd
@@ -311,4 +311,4 @@ It's required from your team to
 # Deliverables
 1. A GitHub link includes the whole project folder (except the target folder) with the final version of the binary class and the test cases.
 2. A report discussing the source and testing code of the design part.
-3. Audible video of about 3 minutes showing the building and running phases of the project as well as the passed tests. Also, show the generated documentation for the functions you added in the design section. 
+3. Audible video of about 3 minutes showing the building and running phases of the project as well as the passed tests. Also, show the generated documentation for the functions you added in the design section.
