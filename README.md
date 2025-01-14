@@ -1,7 +1,7 @@
 # Lab 1: Software Project Management and Comprehension Tool (Apache Maven)
 
 ## Repository Link
-https://github.com/zubxxr/SOFE3980U-Lab1.git
+https://github.com/zubxxr/SOFE3980U-Lab1
 
 ## Table of Contents
 - [Objective](#objective)
